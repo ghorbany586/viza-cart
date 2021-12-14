@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Viza-cart</title>
+    <link rel="stylesheet" href="assets/plugin/bootstrap/rtl-bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/fonts/icomoon.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body class=page-login1" data-spy="scroll" data-target="#navbar">
+
+<header class="position-relative" id="home">
+    <div class="fixed-top d-flex justify-content-xl-between justify-content-center">
+        <div class="btn-menu d-flex align-items-center d-xl-none" onclick="openNav()">
+            <i class="icon-btn-menu"></i>
+        </div>
+        <div class="logo d-flex align-items-center">
+            <img src="assets/images/logo.png" class="" alt="img">
+        </div>
+        <nav class="navigation d-flex align-items-center pt-0" id="mySidenav">
+            <ul class="navbar-nav d-block sidenav">
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/logo.png" class="d-xl-none" alt="img">
+                    <a href="javascript:void(0)" class="closebtn d-xl-none" onclick="closeNav()">&times;</a>
+                </div>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">خانه</a>
+                </li>
+                <li class="nav-item d-inline-block ">
+                    <a class="nav-link active" href="#">فروشگاه</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">مراحل ثبت سفارش</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">آموزش احراز هویت</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">بلاگ</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">درباره ما</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">تماس با ما</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="links d-flex align-items-center">
+            <a class="btn bg-transparent" href="#">
+                <img src="assets/icons/exit.svg" class="exit" alt="exit">
+                <span class="start">ورود/ثبت نام</span>
+            </a>
+
+            <a class="btn btn-basket bg-transparent position-relative" href="#">
+                <img src="assets/icons/cart.svg" alt="">
+                <span class="number">2</span>
+                <span class="basket"> سبد خرید</span>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="down-header align-items-center  text-md-right pr-md-0">
+    <div class="card container position-relative box-shadow">
+        <div class="card-body">
+            <nav class="navbar navbar-expand navbar-light d-flex align-items-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-flex align-items-center">
+                        <a href="#" class="navbar-brand">
+                            <i class="icon-home"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font-weight-bold">خانه /</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font-weight-bold">
+                            <span>حساب کاربری /</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font-weight-bold">
+                            <span class="success">کالاهای برگشتی</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="my-profile d-lg-none align-items-center d-md-block text-md-right">
+    <div class="card container position-relative box-shadow">
+        <div class="card-body d-flex align-items-center">
+            <img src="assets/icons/user.svg" class="mr-4 pl-3 d-flex align-items-center" alt="user">
+            <form action="#" class="position-relative">
+                <div class="select">
+                    <select name="select" class="special-select">
+                        <option value="0" class="select-options">حساب کاربری من</option>
+                        <option value="0">ghorbanym799@gmail.com</option>
+                        <option value="0">ghorbanym799@gmail.com</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="profile mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 aside position-relative p-0">
+                <div class="text-center box-shadow position-relative">
+                    <div class="box-img user-img position-relative">
+                        <img class="mb-0" src="assets/images/user.png" alt="image"/>
+                    </div>
+                    <h2 class="card-title mt-2">محمدرضا فرحزاد</h2>
+                    <p>سطح خرید روزانه:700000تومان</p>
+                    <p>سطح کاربری : برنزی</p>
+                    <div class="btn-yellow">
+                        <span>ارتقا سطح کاربری</span>
+                    </div>
+                    <div class="link-change position-relative">
+                        <a href="#" class="change-code pr-2 position-relative">تغییر رمز عبور</a>
+                        <a href="#" class="pl-2">خروج از حساب</a>
+                    </div>
+                </div>
+                <nav class="navigation box-shadow py-3 px-3 position-relative m-0">
+                    <div class="nav-title">
+                        <h3>حساب کاربری شما</h3>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="nav-item mt-5">
+                            <a href="#" class="nav-link">
+                                <img src="assets/icons/user.svg" alt="user">
+                                <span>حساب کاربری من</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="assets/icons/basket.svg" alt="basket">
+                                <span>تاریخچه سفارش ها</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="assets/icons/calendar.svg" alt="calendar">
+                                <span>تراکنش ها</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="assets/icons/back-basket.svg" alt="back-basket">
+                                <span>کالاهای برگشتی</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="assets/icons/love.svg" alt="love">
+                                <span>لیست دلخواه</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="assets/icons/prize.svg" alt="prize">
+                                <span>امتیازهای جایزه</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="assets/icons/point.svg" alt="point">
+                                <span>آدرس ها</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="assets/icons/alert.svg" alt="alert">
+                                <span>پیام ها</span>
+                                <span class="number-message">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-9 col-12">
+                <div class="card content box-shadow border-0">
+                    <div class="card-body">
+                        <div class="title-content">
+                            <h4 class="edit-information">ویرایش حساب کاربری</h4>
+                        </div>
+                        <div class="user-information">
+                            <div class="title">
+                                <h3 class="mb-4">اطلاعات کاربری</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <form action="#" class="position-relative">
+                                        <div class="form-group special-form-group">
+                                            <label for="username">نام</label>
+                                            <input type="text" class="form-control" placeholder="لطفا نام خود را وارد کنید ">
+                                        </div>
+                                        <div class="form-group special-form-group">
+                                            <label for="username">نام خانوادگی</label>
+                                            <input type="text" class="form-control" placeholder="لطفا نام خانوادگی خود را وارد کنید ">
+                                        </div>
+                                        <div class="form-group special-form-group">
+                                            <label for="username">ایمیل</label>
+                                            <input type="text" class="form-control" placeholder="لطفاایمیل خود را وارد کنید ">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <form action="#" class="position-relative">
+                                        <div class="form-group special-form-group">
+                                            <label for="username">موبایل</label>
+                                            <input type="text" class="form-control" placeholder="لطفا شماره همراه خود را وارد کنید ">
+                                        </div>
+                                        <div class="form-group special-form-group">
+                                            <label for="username">تاریخ تولد</label>
+                                            <input type="text" class="form-control" placeholder="لطفا تاریخ تولد خود را وارد کنید ">
+                                        </div>
+                                        <div class="form-group special-form-group">
+                                            <label for="username">کدملی / شماره پاسپورت</label>
+                                            <input type="text" class="form-control" placeholder="لطفا شماره همراه خود را وارد کنید ">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="add-cart mt-5">
+                            <div class="title">
+                                <h3 class="mb-4">افزودن کارت بانکی</h3>
+                            </div>
+                            <form action="#" class="d-lg-flex d-md-block">
+                                <div class="form-group special-form-group">
+                                    <label for="number-phone">شماره کارت بانکی</label>
+                                    <input type="text" class="form-control" placeholder="شماره کارت بانکی خود را وارد کنید">
+                                </div>
+                                <a href="#" class="link-icon position-relative">
+                                    <i class="icon-plus"></i>
+                                    <span class="success add-number">افزودن کارت بانکی</span>
+                                </a>
+                            </form>
+                        </section>
+                        <section class="user-level mt-6">
+                            <form class="#">
+                                <div class="row">
+                                    <div class="col-12 col-lg-5 d-flex align-items-center">
+                                        <div class="title mb-0 font-weight-bold">سطح کاربری خود را انتخاب کنید</div>
+                                    </div>
+                                    <div class="col-12 col-lg-7">
+                                        <div class="row">
+                                            <div class="col-12 col-md-4">
+                                                <label class="container-checkbox">
+                                                    <input type="radio" name="space-type">
+                                                    <img src="assets/images/bronze.png" alt="bronze">
+                                                    <span class="font-weight-bold bronze">برنزی</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="container-checkbox">
+                                                    <input type="radio" name="space-type">
+                                                    <img src="assets/images/silver.png" alt="silver">
+                                                    <span class="font-weight-bold silver">نقره ای</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <label class="container-checkbox">
+                                                    <input type="radio" name="space-type">
+                                                    <img src="assets/images/gold.png" alt="gold">
+                                                    <span class="font-weight-bold talaei">طلایی</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="mt-5">
+    <div class="container">
+        <div class="content d-lg-flex">
+            <div class="description">
+                <div class="title">
+                    <img class="" src="assets/images/logo.png" alt="image">
+                </div>
+                <p class="text-justify">
+                    طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید درستی به
+                    کار فرما نمیدهد. اگر طراح بخواهد دنبال متن های مرتبط بگردد
+                    تمرکزش از روی کار اصلی برداشته میشود و بر خواهد بود. تمرکزش از روی کار اصلی برداشته میشود و بر خواهد بود. تمرکزش از روی کار اصلی برداشته
+                    میشود و
+                    بر
+                    خواهد بود.
+                </p>
+            </div>
+            <div class="box">
+                <div class="box-container d-flex align-items-center">
+                    <div class="box-img my-shadow">
+                        <img src="assets/images/samandehi.png" alt="">
+                        <p class="text-center">ستاد ساماندهی پایگاه های اینترنتی</p>
+                    </div>
+                    <div class="box-img my-shadow">
+                        <img src="assets/images/majazi.png" alt="">
+                        <p class="text-center">اتحادیه کشوری کسب و کارهای مجازی</p>
+                    </div>
+                    <div class="box-img my-shadow">
+                        <img src="assets/images/namad.png" alt="">
+                        <p class="text-center dark-blue">نماد اعتماد الکترونیکی</p>
+                    </div>
+                </div>
+                <form action="" class="mt-4">
+                    <div class="form-group special-form-group position-relative">
+                        <label class="font-weight-normal">عضویت در خبرنامه</label>
+                        <input type="text" class="form-control" placeholder="لطفا ایمیل خود را وارد کنید">
+                        <button type="submit" class="btn btn-send success d-flex align-items-center">ارسال</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mt-5 introduce">
+            <div class="address d-lg-flex d-block">
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <p class="text-center mb-md-3 mt-md-3">ما هر روز از ساعت 9 تا 18 تو دفترمون هستیم و تقریبا 24 ساعته تو فضای مجازی آنلاینیم </p>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <p class="text-center mb-md-3 mt-md-3"> شماره تماس: 02144901123,09032726001 09032726001, 09032726001</p>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <p class="text-center mb-md-3 mt-md-3"> آدرس ما: تهران ، چهارراه استانبول، بازارچه فردوسی ، طبقه اول ، پلاک 217 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-lg-flex d-block justify-content-center mt-3 mb-4">
+                <a href="#" class="btn btn-instagram text-white mr-lg-2 mb-3">
+                    <i class="icon-instagram"></i>
+                    <span>اینستاگرام ویزاکارت</span>
+                </a>
+                <a href="#" class="btn btn-telegram text-white mr-lg-2 mb-3">
+                    <i class="icon-telegram"></i>
+                    <span>تلگرام ویزاکارت</span>
+                </a>
+                <a href="#" class="btn btn-whatsapp text-white mb-3">
+                    <img src="assets/icons/Union%203.svg" alt="">
+                    <span>واتساپ ویزاکارت</span>
+                </a>
+            </div>
+        </div>
+        <div class="card footer-nav">
+            <div class="card-body px-0 py-2">
+                <ul class="navbar list-unstyled align-items-center m-0">
+                    <li class="nav-item"><a class="nav-link" href="#">فروشگاه</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">مراحل ثبت سفارش</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">آموزش احراز هویت</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">قوانین و مقررات</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">بلاگ</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">درباره ما</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <p class="m-0">استفاده از مطالب سایت ویزاکارت فقط برای مقاصد غیر تجاری و با ذکر منبع بلامانع است. کلیه حقوق این سایت متعلق به سایت ویزاکارت می باشد.</p>
+    </div>
+</footer>
+
+<script src="assets/plugin/jquery/jquery.min.js"></script>
+<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+<script src="assets/plugin/script.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

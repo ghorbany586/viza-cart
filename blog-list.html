@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Viza-cart</title>
+    <link rel="stylesheet" href="assets/plugin/swiper/swiper-bundle.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/plugin/bootstrap/rtl-bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/fonts/icomoon.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body class=blog-list" data-spy="scroll" data-target="#navbar">
+<header class="position-relative" id="home">
+    <div class="fixed-top d-flex justify-content-xl-between justify-content-center">
+        <div class="btn-menu d-flex align-items-center d-xl-none" onclick="openNav()">
+            <i class="icon-btn-menu"></i>
+        </div>
+        <div class="logo d-flex align-items-center">
+            <img src="assets/images/logo.png" class="" alt="img">
+        </div>
+        <nav class="navigation d-flex align-items-center pt-0" id="mySidenav">
+            <ul class="navbar-nav d-block sidenav">
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/logo.png" class="d-xl-none" alt="img">
+                    <a href="javascript:void(0)" class="closebtn d-xl-none" onclick="closeNav()">&times;</a>
+                </div>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">خانه</a>
+                </li>
+                <li class="nav-item d-inline-block ">
+                    <a class="nav-link active" href="#">فروشگاه</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">مراحل ثبت سفارش</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">آموزش احراز هویت</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">بلاگ</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">درباره ما</a>
+                </li>
+                <li class="nav-item d-inline-block">
+                    <a class="nav-link" href="#">تماس با ما</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="links d-flex align-items-center">
+            <a class="btn bg-transparent" href="#">
+                <img src="assets/icons/exit.svg" class="exit" alt="exit">
+                <span class="start">ورود/ثبت نام</span>
+            </a>
+
+            <a class="btn btn-basket bg-transparent position-relative" href="#">
+                <img src="assets/icons/cart.svg" alt="">
+                <span class="number">2</span>
+                <span class="basket"> سبد خرید</span>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="header-item d-lg-block d-none align-items-center position-relative">
+    <div class="card container position-relative box-shadow">
+        <div class="card-body">
+            <nav class="navbar navbar-expand navbar-light justify-content-between  d-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-flex align-items-center">
+                        <a href="#" class="navbar-brand">
+                            <i class="icon-home"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font-weight-bold">خانه /</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font-weight-bold">
+                            <span>حساب کاربری / </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font-weight-bold">
+                            <span class="success">بلاگ </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled navbar-nav d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link  btn-menu" href="#" role="button">
+                            <i class="icon-btn-menu mr-2 pt-4"></i>
+                            <span class="font-weight-bold">مرتب سازی بر اساس : </span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link new-item mr-3" href="#">جدید ترین</a></li>
+                    <li class="nav-item"><a class="nav-link mr-3" href="#">پربازدیدترین </a></li>
+                    <li class="nav-item"><a class="nav-link old-item" href="#">قدیمی ترین</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="down-header d-lg-none d-block align-items-center  text-md-right pr-md-0">
+    <div class="card container position-relative box-shadow">
+        <div class="card-body">
+            <nav class="navbar navbar-expand navbar-light d-flex align-items-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item d-flex align-items-center">
+                        <a href="#" class="navbar-brand">
+                            <i class="icon-home"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font-weight-bold">خانه /</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link font-weight-bold">
+                            <span class="success">فروشگاه اینترنتی ویزاکارت</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="btns d-flex align-items-center d-lg-none d-block mt-3">
+    <button type="button" class="form-control bg-light box-shadow">
+        <p>دسته بندی ها</p>
+    </button>
+    <button type="button" class="form-control bg-light box-shadow ml-2">
+        <p>مرتب سازی</p>
+    </button>
+</div>
+<div class="content-blog-list container mt-4">
+    <div class="row">
+        <div class="col-lg-3 d-lg-block d-none">
+            <div class="card aside border-0 box-shadow">
+                <div class="card-body">
+                    <div class="card-title position-relative">
+                        <h4 class="title btn-title">دسته بندی ها</h4>
+                    </div>
+                    <form action="#" class="position-relative">
+                        <div class="form-group special-form-group">
+                            <label for="search">جستجو</label>
+                            <input type="text" class="form-control" placeholder="جستجو">
+                            <i class="icon-search"></i>
+                        </div>
+                    </form>
+                    <div class="list-item border-top mt-4">
+                        <ul class="list-unstyled mt-4">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">بیت کوین</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">روش های پرداخت</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">ارزهای مجازی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">کیف پول</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">آموزش استفاده از گیفت کارت ها</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">خرید ریالی ارزهای شما</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">پرداخت اینترنتی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">کیف پول</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">روش های پرداخت</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">ارزهای مجازی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">خرید ریالی ارزهای شما</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 col-12 blog-list">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6 col-12col-6">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card border-0 desc-blog position-relative box-shadow">
+                        <div class="card-body d-flex align-items-center ">
+                            <div class="box-img">
+                                <img src="assets/images/11.png" class="img-blog" alt="">
+                            </div>
+                            <div class="desc">
+                                <div class="title-blog"><h4>این موضوع رو برو هستندطراحان</h4></div>
+                                <p class="text-justify">
+                                    این موضوع رو برو هستندطراحان سایت هنگام طراحی قالب سایت معمولا با
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom  d-flex align-items-center position-relative justify-content-between">
+                            <div class="ml-4 ">
+                                <img src="assets/icons/clock.svg" class="clock" alt="clock">
+                                <span class="small">یک روز پیش</span>
+                            </div>
+
+                            <div class="btn">
+                                <button type="button" class="bg-success contanue">ادامه مطلب</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="#" class="position-relative mt-5">
+                <div class="form-group d-flex align-items-center justify-content-center">
+                    <button type="button" class="form-control bg-success">بعدی</button>
+                    <input type="number" class="form-control">
+                    <input type="number" class="form-control">
+                    <input type="number" class="form-control">
+                    <input type="number" class="form-control">
+                    <button type="button" class="form-control bg-purple ml-2">قبلی</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="mt-5">
+    <div class="container">
+        <div class="content d-lg-flex">
+            <div class="description">
+                <div class="title">
+                    <img class="" src="assets/images/logo.png" alt="image">
+                </div>
+                <p class="text-justify">
+                    طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید درستی به
+                    کار فرما نمیدهد. اگر طراح بخواهد دنبال متن های مرتبط بگردد
+                    تمرکزش از روی کار اصلی برداشته میشود و بر خواهد بود. تمرکزش از روی کار اصلی برداشته میشود و بر خواهد بود. تمرکزش از روی کار اصلی برداشته
+                    میشود و
+                    بر
+                    خواهد بود.
+                </p>
+            </div>
+            <div class="box">
+                <div class="box-container d-flex align-items-center">
+                    <div class="box-img my-shadow">
+                        <img src="assets/images/samandehi.png" alt="">
+                        <p class="text-center">ستاد ساماندهی پایگاه های اینترنتی</p>
+                    </div>
+                    <div class="box-img my-shadow">
+                        <img src="assets/images/majazi.png" alt="">
+                        <p class="text-center">اتحادیه کشوری کسب و کارهای مجازی</p>
+                    </div>
+                    <div class="box-img my-shadow">
+                        <img src="assets/images/namad.png" alt="">
+                        <p class="text-center dark-blue">نماد اعتماد الکترونیکی</p>
+                    </div>
+                </div>
+                <form action="" class="mt-4">
+                    <div class="form-group special-form-group position-relative">
+                        <label class="font-weight-normal">عضویت در خبرنامه</label>
+                        <input type="text" class="form-control" placeholder="لطفا ایمیل خود را وارد کنید">
+                        <button type="submit" class="btn btn-send success d-flex align-items-center">ارسال</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="mt-5 introduce">
+            <div class="address d-lg-flex d-block">
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <p class="text-center mb-md-3 mt-md-3">ما هر روز از ساعت 9 تا 18 تو دفترمون هستیم و تقریبا 24 ساعته تو فضای مجازی آنلاینیم </p>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <p class="text-center mb-md-3 mt-md-3"> شماره تماس: 02144901123,09032726001 09032726001, 09032726001</p>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <p class="text-center mb-md-3 mt-md-3"> آدرس ما: تهران ، چهارراه استانبول، بازارچه فردوسی ، طبقه اول ، پلاک 217 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-lg-flex d-block justify-content-center mt-3 mb-4">
+                <a href="#" class="btn btn-instagram text-white mr-lg-2 mb-3">
+                    <i class="icon-instagram"></i>
+                    <span>اینستاگرام ویزاکارت</span>
+                </a>
+                <a href="#" class="btn btn-telegram text-white mr-lg-2 mb-3">
+                    <i class="icon-telegram"></i>
+                    <span>تلگرام ویزاکارت</span>
+                </a>
+                <a href="#" class="btn btn-whatsapp text-white mb-3">
+                    <img src="assets/icons/Union%203.svg" alt="">
+                    <span>واتساپ ویزاکارت</span>
+                </a>
+            </div>
+        </div>
+        <div class="card footer-nav">
+            <div class="card-body px-0 py-2">
+                <ul class="navbar list-unstyled align-items-center m-0">
+                    <li class="nav-item"><a class="nav-link" href="#">فروشگاه</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">مراحل ثبت سفارش</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">آموزش احراز هویت</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">قوانین و مقررات</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">بلاگ</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">درباره ما</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <p class="m-0">استفاده از مطالب سایت ویزاکارت فقط برای مقاصد غیر تجاری و با ذکر منبع بلامانع است. کلیه حقوق این سایت متعلق به سایت ویزاکارت می باشد.</p>
+    </div>
+</footer>
+
+<script src="assets/plugin/jquery/jquery.min.js"></script>
+<script src="assets/plugin/swiper/swiper-bundle.min.js"></script>
+<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+<script src="assets/plugin/script.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
